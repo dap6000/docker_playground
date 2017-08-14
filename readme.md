@@ -1,11 +1,11 @@
-#Docker Playground
+# Docker Playground
 This is where I'm keeping my experiments with Docker, for now at least. As projects grow I may spin things out to individual repos. For now I reached a point where _not_ having source control for the versions of my LAMP stack dockerfile seemed like a bad idea. And I wasn't sure the scope of that project justified its own repo.
 
 Of course, as I write this the LAMP container is the *only* project here. And LAMP is a bit of a misnomer 'cos there's no MySQL element in it yet. And may not be. Or maybe I should do MySQL as it's own container and compose them?
 
 I won't claim to be any sort of Docker expert. But if documenting my process and failures here can help ease the learning curve for anyone else out there I'll consider that a win. 
 
-##Advice and Lessons Learned
+## Advice and Lessons Learned
 Be warned, this is a brain dump with little to no organization behind it. I'll try to iterate on it and make it suck less over time.
 
 Even after a couple of months of dabbling in Docker I still find myself occasionally conflating images and containers. If you look at the documentation you'll often see multiple syntax for the same command. For example see https://docs.docker.com/engine/reference/commandline/create/ vs https://docs.docker.com/engine/reference/commandline/container_create/. I've learned to lean on the more verbose version if only to reinforce the key terms. A container is `created` from an image. And an image is `built` from a dockerfile (and build context). There are shortcuts. For example `docker run…` builds an image then creates a container from it then starts that container then optionally issues a command to it. That's where a lot of tutorials start. If your brain works like mine you may wanna slow down and do things the more verbose, multi-step, easier to reason about and debug way. Maybe someday I'll welcome the shortcuts. But I haven't reached that point yet.
