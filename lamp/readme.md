@@ -80,3 +80,4 @@ $ docker container start --attach my_craft_project
 ```
 
 * I can now surf to the project using http://localhost:9001/
+* The Craft project needs to be properly configured. For example, there's no MySQL instance in this container yet so we need to connect to an instance running on the host machine. To do that on a Mac we point the connection at `docker.for.mac.localhost`
